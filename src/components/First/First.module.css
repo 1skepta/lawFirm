@@ -1,0 +1,81 @@
+.background {
+  width: 100%;
+  height: 350px;
+  background-image: url("../../../public/assets/mobilebg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(239, 234, 234);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.background h1 {
+  font-weight: 300;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin: 50px 0 20px 0;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: slideIn 1s ease-out forwards;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.icon {
+  color: #cb9612;
+}
+.background p {
+  letter-spacing: 2px;
+  color: #727171;
+  margin: 0;
+}
+.backgroundText {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f5f4f0;
+}
+.backgroundText h1 {
+  font-weight: 500;
+  color: #333333;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+.backgroundText h2 {
+  letter-spacing: 1px;
+  color: #333333;
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.backgroundText p {
+  margin: 20px 0;
+  color: #333333;
+  width: 80%;
+  font-weight: 300;
+  line-height: 1.3;
+  text-align: justify;
+}
+.backgroundText h4 {
+  font-size: 0.9rem;
+  color: #333333;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #cb9612;
+  border-bottom: 1px solid #cb9612;
+  padding-bottom: 10px;
+  margin-bottom: 70px;
+}

@@ -1,0 +1,84 @@
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 0;
+  width: 100%;
+  background-color: #191919;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  padding: 35px;
+  z-index: 100;
+}
+
+.icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: black;
+  padding: 5px;
+  color: #cb9612;
+}
+
+.head h1 {
+  margin: 0;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 1.7em;
+  font-weight: 300;
+}
+
+.slideshowItems {
+  background-color: #cb9612;
+  color: black;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 0.7em;
+  font-weight: 300;
+}
+
+.slideshowItems ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.slideshowItems li {
+  padding: 10px;
+  font-size: 1.2em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slideshowItems li.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slideshowItems li:last-child {
+  border-bottom: none;
+}
+
+.divVisible {
+  display: block;
+  height: auto;
+  animation: slideDown 0.3s ease-out;
+}
+
+.divHidden {
+  display: none;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
