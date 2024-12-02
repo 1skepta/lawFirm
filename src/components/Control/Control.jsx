@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./Control.module.css";
 import { FaBars } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 function Control() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +34,11 @@ function Control() {
       <div className={isMenuOpen ? styles.divVisible : styles.divHidden}>
         <div className={styles.slideshowItems}>
           <ul>
-            <li>ABOUT</li>
+            <li>
+              <Link to="/about" className="link">
+                ABOUT
+              </Link>
+            </li>
             <li>GLOBAL REACH</li>
             <li>RESOURCES</li>
             <li>PRACTICE AREAS</li>
@@ -46,7 +51,11 @@ function Control() {
       </div>
 
       <div className={styles.head}>
-        <h1>FORTUNE | ORE</h1>
+        <h1>
+          <Link to="/" className="link">
+            FORTUNE | ORE
+          </Link>
+        </h1>
         {isMenuOpen ? (
           <GrClose className={styles.icon} size={28} onClick={handleToggle} />
         ) : (

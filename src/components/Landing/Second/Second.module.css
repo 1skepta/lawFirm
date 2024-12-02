@@ -1,0 +1,88 @@
+.background {
+  width: 100%;
+  height: 550px;
+  background-image: url("../../../../public/assets/secondbg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(239, 234, 234);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+  justify-content: space-between;
+}
+
+.background h1 {
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  text-align: center;
+  width: 80%;
+  letter-spacing: 2px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.arrow {
+  cursor: pointer;
+  padding: 10px 20px;
+  user-select: none;
+  background-color: #78726c;
+}
+
+.arrow:hover {
+  color: #cb9612;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.content.exiting.next {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.content.exiting.previous {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.content.entering.next {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.content.entering.previous {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.content.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.content p {
+  letter-spacing: 2px;
+}
+
+.icon {
+  font-size: 7rem;
+  margin-bottom: 5px;
+  color: #cb9612;
+}
