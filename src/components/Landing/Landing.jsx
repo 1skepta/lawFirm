@@ -9,7 +9,7 @@ import Control from "../Control/Control";
 
 function Landing() {
   return (
-    <div>
+    <div className="App">
       <Control />
       <First />
       <Second />
